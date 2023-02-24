@@ -1,0 +1,52 @@
+{
+  "Register": [
+    {
+      "full_name": "snehal bhosale",
+      "mobile_number": 9970166981,
+      "email": "snehalbhosale647@gmail.com",
+      "password": "snheal@123",
+      "cpassword": "snehal@123",
+      "id": 1
+    },
+    {
+      "full_name": "anuju bhosale",
+      "mobile_number": 9970166981,
+      "email": "anujubhosale647@gmail.com",
+      "password": "anju@123",
+      "cpassword": "anju@123",
+      "id": 2
+    },
+    {
+      "full_name": "Sonia Harper",
+      "mobile_number": "964",
+      "email": "noroqolu@mailinator.com",
+      "password": "Ea consequatur tempo",
+      "cpassword": "Et in facere reprehe",
+      "id": 3
+    },
+    {
+      "full_name": "Hedwig Rios",
+      "mobile_number": "698",
+      "email": "nojare@mailinator.com",
+      "password": "Laborum consequuntur",
+      "cpassword": "Rerum exercitationem",
+      "id": 4
+    },
+    {
+      "full_name": "Elvis Larson",
+      "mobile_number": "494",
+      "email": "cepuzo@mailinator.com",
+      "password": "Aliqua Voluptatibus",
+      "cpassword": "Aut facere ullam dol",
+      "id": 5
+    },
+    {
+      "full_name": "Virginia Goodman",
+      "mobile_number": "740",
+      "email": "hojokuj@mailinator.com",
+      "password": "Odit aut eum ut debi",
+      "cpassword": "rrrr",
+      "id": 6
+    }
+  ]
+}
