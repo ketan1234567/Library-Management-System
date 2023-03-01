@@ -17,7 +17,6 @@ this.route.navigate(['/']);
   }
   authError:any;
   constructor(private user:UserAuthService,private route:Router){
-
   }
   checkLogin(){
     this.user.invalidUserAuth.subscribe((result)=>{
