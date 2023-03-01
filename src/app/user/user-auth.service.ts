@@ -11,7 +11,7 @@ export class UserAuthService {
 
  
   invalidUserAuth=new EventEmitter<boolean>(false)
-  constructor(private http:HttpClient,private router:Router){}
+  constructor(private http:HttpClient,private route:Router){}
   usersignup(user:any){
     this.http.post('http://localhost:3000/Register',user,{observe:'response'}).subscribe((result)=>{
       if(result){
@@ -26,11 +26,16 @@ export class UserAuthService {
     ).subscribe((result)=>{
       if(result && result.body?.length){
         localStorage.setItem('Register',JSON.stringify(result.body[0]));
-        this.router.navigate(['admin']);
+        this.route.navigate(['admin']);
         this.invalidUserAuth.emit(true)
       }else{
         this.invalidUserAuth.emit(false)
       }
     })
   }
+  userAuthReload(){
+    localStorage.removeItem('Register')
+    this.invalidUserAuth.emit(false)
+     this.route.navigate(['/'])
+    }
 }
