@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
+import { CategoryComponent } from './category/category.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AdminComponent } from './admin/admin.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    AdminComponent
+    AdminComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

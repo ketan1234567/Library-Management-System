@@ -1,0 +1,27 @@
+<div class="form">
+    <form [formGroup]="categoryForm" (ngSubmit)="onFormSubmit()">
+     <!---- <p [style.color]="checkdata===true? 'green' : 'red'" style="text-align: center;">{{error}}</p>-->
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Add Category</mat-label>
+            <input matInput formControlName="email"  [errorStateMatcher]="esMatcher">
+            <mat-icon matSuffix></mat-icon>
+           <!---- <mat-error *ngIf="category?.hasError('required') ">Username is required.</mat-error>-->
+            <!--<mat-error *ngIf="error">Username is required.</mat-error>-->
+           <!----<p [style.color]="checkdata===true? 'green' : 'red'">{{error}}</p>-->
+          </mat-form-field>
+          
+       
+        </div>
+        <div>   
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Active </mat-radio-button>
+                <mat-radio-button value="2">InActive</mat-radio-button>
+              </mat-radio-group>
+        </div>
+        <div class="button1">
+          <button mat-raised-button mat-button color="accent">Create</button>
+        </div>
+      </form> 
+
+</div>

@@ -20,7 +20,7 @@ this.route.navigate(['/']);
   }
   checkLogin(){
     this.user.invalidUserAuth.subscribe((result)=>{
-      console.log(result)
+      //console.log(result)
       if(result){
         this.authError=result
       }
