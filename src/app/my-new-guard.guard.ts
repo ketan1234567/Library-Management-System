@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { UserAuthService } from './user/user-auth.service';
 
@@ -7,14 +7,17 @@ import { UserAuthService } from './user/user-auth.service';
   providedIn: 'root'
 })
 export class MyNewGuardGuard implements CanActivate {
-  constructor(private user:UserAuthService){}
-  canActivate(
-    route: ActivatedRouteSnapshot,
+  constructor(private user:UserAuthService,private route:Router){}
+  canActivate(route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if (localStorage.getItem('Register')) {
-      return true
+      let url: string = state.url;
+      console.log('Url:'+ url)
+      if (this.user.isUserLoggedIn()) {
+        return true; 
       }
-      return this.user.invalidUserAuth;
+            this.user.setRedirectUrl(url);
+            this.route.navigate([ this.user.getLoginUrl() ]);
+      return false;
+    }
   }
 
-}

@@ -27,6 +27,7 @@ import {MatRadioModule} from '@angular/material/radio';
 
 
 
+
 @NgModule({
     exports:[
         MatCardModule,
@@ -53,7 +54,9 @@ import {MatRadioModule} from '@angular/material/radio';
         MatInputModule,
         MatDialogModule,
         MatTableModule,
-        MatRadioModule
+        MatRadioModule,
+        MatCheckboxModule,
+        MatFormFieldModule
       
         
     

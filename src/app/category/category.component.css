@@ -14,5 +14,11 @@ mat-form-field {
   color: red;
 }
 .mat-mdc-radio-button ~ .mat-mdc-radio-button {
-    margin-left: 16px;
+   
+    flex-direction: column;
+    display: flex;
+
   }
+
+
+  

@@ -9,7 +9,12 @@ import { login, signUp } from '../data-type';
 })
 export class UserAuthService {
 
- 
+  data23:any;
+
+  authError:any
+  private isloggedIn: boolean = false;
+  private redirectUrl: string = '/';
+  private loginUrl: string = '/login';
   invalidUserAuth=new EventEmitter<boolean>(false)
   constructor(private http:HttpClient,private route:Router){}
   usersignup(user:any){
@@ -18,7 +23,6 @@ export class UserAuthService {
         localStorage.setItem('Register',JSON.stringify(result.body));
       }
     })
-
   }
   userLogin(data:any){
     this.http.get<signUp[]>(`http://localhost:3000/Register?email=${data.email}&password=${data.password}`,
@@ -26,10 +30,12 @@ export class UserAuthService {
     ).subscribe((result)=>{
       if(result && result.body?.length){
         localStorage.setItem('Register',JSON.stringify(result.body[0]));
-        this.route.navigate(['admin']);
+        this.route.navigate([ "admin" ]);
         this.invalidUserAuth.emit(true)
+        this.isloggedIn=true;
       }else{
         this.invalidUserAuth.emit(false)
+        this.isloggedIn=false;
       }
     })
   }
@@ -38,4 +44,20 @@ export class UserAuthService {
     this.invalidUserAuth.emit(false)
      this.route.navigate(['/'])
     }
+    isUserLoggedIn() {
+      console.log(this.isloggedIn);
+      
+      return this.isloggedIn;
+      
+    }
+    setRedirectUrl(url: string): void {
+      this.redirectUrl = url;
+    }
+    getLoginUrl(): any {
+      return this.loginUrl;
+    
+}
+logoutUser(): void {
+  this.isloggedIn = false;
+}
 }

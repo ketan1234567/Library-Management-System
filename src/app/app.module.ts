@@ -10,6 +10,11 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { CategoryComponent } from './category/category.component';
+import { ManageCategoryComponent } from './category/manage-category/manage-category.component';
+import { UserAuthService } from './user/user-auth.service';
+import { MyNewGuardGuard } from './my-new-guard.guard';
+import { ModalpopupComponent } from './modalpopup/modalpopup.component';
+
 
 
 @NgModule({
@@ -18,7 +23,9 @@ import { CategoryComponent } from './category/category.component';
     LoginComponent,
     RegisterComponent,
     AdminComponent,
-    CategoryComponent
+    CategoryComponent,
+    ManageCategoryComponent,
+    ModalpopupComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +35,11 @@ import { CategoryComponent } from './category/category.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UserAuthService,
+    MyNewGuardGuard
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -54,7 +54,20 @@
       "email": "deshmukhketan647@gmail.com",
       "password": "ketan@123",
       "cpassword": "ketan@123",
+      "admin": "admin",
       "id": 7
+    }
+  ],
+  "category": [
+    {
+      "category": "song",
+      "status": "inactive",
+      "id": 3
+    },
+    {
+      "category": "sports",
+      "status": "inactive",
+      "id": 4
     }
   ]
 }

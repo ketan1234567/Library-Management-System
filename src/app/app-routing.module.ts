@@ -4,6 +4,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { CategoryComponent } from './category/category.component';
+import { ManageCategoryComponent } from './category/manage-category/manage-category.component';
+import { MyNewGuardGuard } from './my-new-guard.guard';
 
 const routes: Routes = [
    {
@@ -16,13 +18,32 @@ const routes: Routes = [
    },
    {
     path:"admin",
-    component:AdminComponent
-   },
-   {
-    path:"add-category",
-    component:CategoryComponent
-   }
-];
+    component:AdminComponent,
+    canActivate: [MyNewGuardGuard]
+  },
+
+
+      {
+        path:"add-category",
+        component:CategoryComponent,
+        canActivate: [MyNewGuardGuard]
+   
+       
+      },
+      {
+        path:"manage-category",
+        component:ManageCategoryComponent,
+        canActivate: [MyNewGuardGuard]
+   
+       
+      }
+
+
+
+    ]
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

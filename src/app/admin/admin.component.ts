@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
 if(!this.authError){
-this.route.navigate(['/']);
+
 }
       
   }
@@ -26,10 +26,10 @@ this.route.navigate(['/']);
       }
     })
   }
-  logout(){
- localStorage.removeItem('Register');
-    this.route.navigate(['/']);
-   // this.user.userAuthReload();
-
-  }
+  logout() {
+    localStorage.clear();
+    this.user.logoutUser();
+    this.route.navigate([this.user.getLoginUrl()]);
+    this.checkLogin();
+}
 }
