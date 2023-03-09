@@ -1,0 +1,21 @@
+mat-form-field {
+    width: 400px !important
+  }
+  .form{
+   /* margin:-20% 0px 0px 0px;*/
+   /* background-color: skyblue;*/
+    border: solid 2px #ebccd1;
+    padding:30px;
+}
+.button1{
+    margin:0px 0px 0px 159px;
+}
+.error{
+  color: red;
+}
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+   
+    flex-direction: column;
+    display: flex;
+
+  }

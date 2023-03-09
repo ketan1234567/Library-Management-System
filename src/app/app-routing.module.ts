@@ -6,6 +6,8 @@ import { AdminComponent } from './admin/admin.component';
 import { CategoryComponent } from './category/category.component';
 import { ManageCategoryComponent } from './category/manage-category/manage-category.component';
 import { MyNewGuardGuard } from './my-new-guard.guard';
+import { AuthorComponent } from './author/author.component';
+import { ManageAuthorComponent } from './manage-author/manage-author.component';
 
 const routes: Routes = [
    {
@@ -34,8 +36,16 @@ const routes: Routes = [
         path:"manage-category",
         component:ManageCategoryComponent,
         canActivate: [MyNewGuardGuard]
-   
-       
+      },
+      {
+        path:"auth",
+        component:AuthorComponent,
+        canActivate: [MyNewGuardGuard]
+      },
+      {
+        path:"manage-author",
+        component:ManageAuthorComponent,
+        canActivate: [MyNewGuardGuard]
       }
 
 

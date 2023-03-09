@@ -14,6 +14,8 @@ import { ManageCategoryComponent } from './category/manage-category/manage-categ
 import { UserAuthService } from './user/user-auth.service';
 import { MyNewGuardGuard } from './my-new-guard.guard';
 import { ModalpopupComponent } from './modalpopup/modalpopup.component';
+import { AuthorComponent } from './author/author.component';
+import { ManageAuthorComponent } from './manage-author/manage-author.component';
 
 
 
@@ -25,7 +27,9 @@ import { ModalpopupComponent } from './modalpopup/modalpopup.component';
     AdminComponent,
     CategoryComponent,
     ManageCategoryComponent,
-    ModalpopupComponent
+    ModalpopupComponent,
+   AuthorComponent,
+   ManageAuthorComponent
   ],
   imports: [
     BrowserModule,
