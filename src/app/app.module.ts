@@ -29,6 +29,7 @@ import { ManageAuthorComponent } from './manage-author/manage-author.component';
     ManageCategoryComponent,
     ModalpopupComponent,
    AuthorComponent,
+   ManageAuthorComponent,
    ManageAuthorComponent
   ],
   imports: [

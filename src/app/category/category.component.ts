@@ -29,8 +29,5 @@ if(this.categoryForm.valid){
 }else{
   alertify.error("it is not Created");
 }
-
-    
-
   }
 }

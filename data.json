@@ -69,5 +69,15 @@
       "status": "inactive",
       "id": 4
     }
+  ],
+  "author": [
+    {
+      "author": "song",
+      "id": 3
+    },
+    {
+      "Add_Author": "ketan deshmukh",
+      "id": 4
+    }
   ]
 }
